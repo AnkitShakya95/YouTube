@@ -295,20 +295,28 @@ async def txt_handler(bot: Client, m: Message):
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]} {my_name}'
 
-            if 'khansirvod4.pc.cdn.bitgravity.com' in url:               
+            if '/do' in url:               
+               pdf_id = url.split("/")[-1].split(".pdf")[0]
+               print(pdf_id)
+               url = f"https://kgs-v2.akamaized.net/kgs/do/pdfs/{pdf_id}.pdf"
+               
+               
+            if 'bitgravity.com' in url:               
                parts = url.split('/')               
                part1 = parts[1]
                part2 = parts[2]
                part3 = parts[3] 
                part4 = parts[4]
                part5 = parts[5]
+               part6 = parts[6]
                
                print(f"PART1: {part1}")
                print(f"PART2: {part2}")
                print(f"PART3: {part3}")
                print(f"PART4: {part4}")
                print(f"PART5: {part5}")
-               url = f"https://kgs-v4.akamaized.net/kgs-cv/{part3}/{part4}/{part5}"
+               print(f"PART6: {part6}")
+               url = f"https://kgs-v2.akamaized.net/{part3}/{part4}/{part5}/{part6}"
 
             if '?list' in url:
                video_id = url.split("/embed/")[1].split("?")[0]
@@ -818,6 +826,29 @@ async def txt_handler(bot: Client, m: Message):
                 bcov = 'bcov_auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjQyMzg3OTEsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiZEUxbmNuZFBNblJqVEROVmFWTlFWbXhRTkhoS2R6MDkiLCJmaXJzdF9uYW1lIjoiYVcxV05ITjVSemR6Vm10ak1WUlBSRkF5ZVNzM1VUMDkiLCJlbWFpbCI6Ik5Ga3hNVWhxUXpRNFJ6VlhiR0ppWTJoUk0wMVdNR0pVTlU5clJXSkRWbXRMTTBSU2FHRnhURTFTUlQwPSIsInBob25lIjoiVUhVMFZrOWFTbmQ1ZVcwd1pqUTViRzVSYVc5aGR6MDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJOalZFYzBkM1IyNTBSM3B3VUZWbVRtbHFRVXAwVVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUShBbmRyb2lkIDEwLjApIiwiZGV2aWNlX21vZGVsIjoiU2Ftc3VuZyBTTS1TOTE4QiIsInJlbW90ZV9hZGRyIjoiNTQuMjI2LjI1NS4xNjMsIDU0LjIyNi4yNTUuMTYzIn19.snDdd-PbaoC42OUhn5SJaEGxq0VzfdzO49WTmYgTx8ra_Lz66GySZykpd2SxIZCnrKR6-R10F5sUSrKATv1CDk9ruj_ltCjEkcRq8mAqAytDcEBp72-W0Z7DtGi8LdnY7Vd9Kpaf499P-y3-godolS_7ixClcYOnWxe2nSVD5C9c5HkyisrHTvf6NFAuQC_FD3TzByldbPVKK0ag1UnHRavX8MtttjshnRhv5gJs5DQWj4Ir_dkMcJ4JaVZO3z8j0OxVLjnmuaRBujT-1pavsr1CCzjTbAcBvdjUfvzEhObWfA1-Vl5Y4bUgRHhl1U-0hne4-5fF0aouyu71Y6W0eg'
                 url = url.split("bcov_auth")[0]+bcov
 
+            if '/do' in url:               
+               pdf_id = url.split("/")[-1].split(".pdf")[0]
+               print(pdf_id)
+               url = f"https://kgs-v2.akamaized.net/kgs/do/pdfs/{pdf_id}.pdf"
+               
+               
+            if 'bitgravity.com' in url:               
+               parts = url.split('/')               
+               part1 = parts[1]
+               part2 = parts[2]
+               part3 = parts[3] 
+               part4 = parts[4]
+               part5 = parts[5]
+               part6 = parts[6]
+               
+               print(f"PART1: {part1}")
+               print(f"PART2: {part2}")
+               print(f"PART3: {part3}")
+               print(f"PART4: {part4}")
+               print(f"PART5: {part5}")
+               print(f"PART6: {part6}")
+               url = f"https://kgs-v2.akamaized.net/{part3}/{part4}/{part5}/{part6}"
+
             if '?list' in url:
                video_id = url.split("/embed/")[1].split("?")[0]
                print(video_id)
@@ -1309,6 +1340,28 @@ async def txt_handler(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1[:60]} {my_name}'
                       
 
+            if '/do' in url:               
+               pdf_id = url.split("/")[-1].split(".pdf")[0]
+               print(pdf_id)
+               url = f"https://kgs-v2.akamaized.net/kgs/do/pdfs/{pdf_id}.pdf"
+               
+               
+            if 'bitgravity.com' in url:               
+               parts = url.split('/')               
+               part1 = parts[1]
+               part2 = parts[2]
+               part3 = parts[3] 
+               part4 = parts[4]
+               part5 = parts[5]
+               part6 = parts[6]
+               
+               print(f"PART1: {part1}")
+               print(f"PART2: {part2}")
+               print(f"PART3: {part3}")
+               print(f"PART4: {part4}")
+               print(f"PART5: {part5}")
+               print(f"PART6: {part6}")
+               url = f"https://kgs-v2.akamaized.net/{part3}/{part4}/{part5}/{part6}"
             
             if '?list' in url:
                video_id = url.split("/embed/")[1].split("?")[0]
